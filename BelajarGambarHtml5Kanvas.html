@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function(){
+
+// Langkah 1: Temukan Elemen Kanvas
+// Ini dilakukan dengan menggunakan metode DOM HTML getElementById ():
+var canvas = document.getElementById("myCanvas");
+
+// Langkah 2: Buat Objek Gambar
+// Diperlukan jenis objek gambar untuk kanvas.
+// GetContext () adalah objek HTML bawaan, dengan properti dan metode untuk menggambar:
+var context = canvas.getContext("2d");
+
+// Langkah 3: Gambar di atas Kanvas
+// Kemudian baru menggambar di atas kanvas.
+// Menyiapkan proses menggambar.
+context.beginPath();
+
+// Menggambar persegi empat dengan koordinat awal x= 240px dan y=100px
+// dengan ukuran lebar=200px dan tinggi=130px
+context.rect(250, 100, 200, 130);
+
+// Seting isian objek gambar ke warna biru:
+context.fillStyle = "blue";
+context.fill();
+
+// Silahkan dipahami
+context.beginPath();
+context.arc(450, 100, 50, 0, 2 * Math.PI, false);
+context.fillStyle = "red";
+context.fill();
+};
+</script>
+</head>
+
+<body>
+<canvas id="myCanvas" width="800" height="600" 
+		style="border:1px solid black;">
+Your browser does not support the canvas element.
+</canvas>
+</body>
+</html>
+
